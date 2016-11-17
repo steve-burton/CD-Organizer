@@ -9,7 +9,10 @@ else
   <ul>
     @foreach (var cd in Model)
     {
-      <li><a href="/CD/@cd.GetID()">@cd.GetArtist()</a></li>
+      <li><a href="/CD/@cd.GetID()">@cd.GetAlbumTitle()</a></li>
     }
   </ul>
 }
+<br>
+<a href="/CD/new">Add new CD to Collection</a><br>
+<p><a href="/CD/search">Search for CDs by artist</a></p>

@@ -1,0 +1,13 @@
+<h1>Here are the CDs we found:</h1>
+<ul>
+  @foreach (var artist in Model)
+  {
+    @foreach (var cd in artist.GetLibrary())
+    {
+      <li>@cd.GetArtist(), @cd.GetAlbumTitle()</li>
+    }
+  }
+</ul>
+<br>
+<p>Search <a href="/CD/search">Again</a></p>
+<p>Back to <a href="/">Homepage</a></p>
